@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "todolist backend using MongoDB and Express",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arihu/Various-TodoList.git"
+  },
+  "author": "Ari Hu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arihu/Various-TodoList/issues"
+  },
+  "homepage": "https://github.com/arihu/Various-TodoList#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
