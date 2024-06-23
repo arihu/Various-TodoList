@@ -31,13 +31,14 @@ exports.putItem = (req, res) => {
 };
 
 exports.deleteItem = (req, res) => {
-    Todo.findByIdAndRemove(req.params.id, req.body)
-        .then((data) =>
-            res.json({ message: "Item deleted successfully", data })
-        )
-        .catch((err) =>
-            res
-                .status(404)
-                .json({ message: "Item not found", error: err.message })
-        );
+    Todo.findByIdAndDelete(req.params.id)
+        .then((data) => {
+            if (!data) {
+                return res.status(404).json({ error: "Todo not found" });
+            }
+            res.json({ message: "Todo deleted successfully", data });
+        })
+        .catch((err) => {
+            res.status(500).json({ error: "Internal server error", message: err.message });
+        });
 };
