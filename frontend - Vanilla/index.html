@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Todolist</title>
+  </head>
+  <body>
+    <h1>TodoList</h1>
+    <form id="todoForm">
+      <label for="title">Title</label>
+      <input type="text" id="title" placeholder="Enter a title" required />
+      <label for="description">Description</label>
+      <textarea id="description"></textarea>
+      <label for="finished">Finished</label>
+      <input type="checkbox" id="finished" />
+      <label for="deadline">Deadline</label>
+      <input type="datetime-local" id="deadline" />
+      <button type="submit" class="submit">Add Item</button>
+    </form>
+    <ul id="todoList"></ul>
+    <script src="scripts.js"></script>
+  </body>
+</html>
